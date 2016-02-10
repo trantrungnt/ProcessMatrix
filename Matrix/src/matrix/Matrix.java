@@ -35,19 +35,21 @@ public class Matrix {
                { 
                  System.out.print("\na[" + i + "][" + j + "]=");  
                   a[i][j] = Integer.parseInt(oBufferedReader.readLine());
-               }
+               }            
+                    
+             //hien thi 1 Ma tran voi m hang n cot
+            for(int i=0; i<m; i++)
+            {    
+               for(int j=0; j< n; j++)
+                   System.out.print(a[i][j] + " ");
+               System.out.println();
+            } 
         }
         catch(Exception e){
             System.out.println(e.toString());
         }
             
-        
-        /*for(int i=0; i<m; i++)
-        {    
-           for(int j=0; j< n; j++)
-               System.out.print(a[i][j] + " ");
-           System.out.println();
-        } */      
+       
     }
 }
 
