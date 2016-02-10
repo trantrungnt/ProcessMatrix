@@ -44,6 +44,15 @@ public class Matrix {
                    System.out.print(a[i][j] + " ");
                System.out.println();
             } 
+            
+            //dem so chan co trong ma tran a[m][n]
+            int count=0;            
+            for(int i=0; i<m; i++)
+                for(int j=0; j<n; j++)
+                    if(a[i][j]%2==0)
+                        count = count + 1;
+            System.out.println("Ma tran a co " + count + " phan tu chan");
+                        
         }
         catch(Exception e){
             System.out.println(e.toString());
