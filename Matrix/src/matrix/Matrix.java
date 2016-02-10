@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package matrix;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 /**
  *
@@ -16,20 +18,36 @@ public class Matrix {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int[][] a = new int[2][3];
-        a[0][0] = 3;
-        a[0][1] = 5;
-        a[0][2] = 9;
-        a[1][0] = 6;
-        a[1][1] = 2;
-        a[1][2] = 8;
+        int m, n;                                        
         
-        for(int i=0; i<2; i++)
+        try{                    
+            BufferedReader oBufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        
+            System.out.println("Nhap 1 ma tran co m hang va n cot:");
+            System.out.print("\n+ Nhap so hang m=");
+            m = Integer.parseInt(oBufferedReader.readLine());
+            System.out.print("\n+ Nhap so cot n=");
+            n = Integer.parseInt(oBufferedReader.readLine());
+            
+            int[][] a = new int[m][n];  
+            for(int i=0; i<m; i++)
+               for(int j=0; j<n; j++)
+               { 
+                 System.out.print("\na[" + i + "][" + j + "]=");  
+                  a[i][j] = Integer.parseInt(oBufferedReader.readLine());
+               }
+        }
+        catch(Exception e){
+            System.out.println(e.toString());
+        }
+            
+        
+        /*for(int i=0; i<m; i++)
         {    
-           for(int j=0; j< 3; j++)
+           for(int j=0; j< n; j++)
                System.out.print(a[i][j] + " ");
            System.out.println();
-        }       
+        } */      
     }
-    
 }
+
