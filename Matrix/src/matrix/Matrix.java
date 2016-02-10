@@ -52,7 +52,14 @@ public class Matrix {
                     if(a[i][j]%2==0)
                         count = count + 1;
             System.out.println("Ma tran a co " + count + " phan tu chan");
-                        
+            
+            //tinh tong cac phan tu chan co trong ma tran A
+            int sum=0;
+            for(int i=0; i<m; i++)
+                for(int j=0; j<n; j++)
+                    if(a[i][j]%2==0)
+                                    sum = a[i][j] + sum;
+            System.out.println("Tong cac phan tu chan co trong Ma tran A la: " + sum);            
         }
         catch(Exception e){
             System.out.println(e.toString());
