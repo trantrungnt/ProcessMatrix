@@ -60,6 +60,13 @@ public class Matrix {
                     if(a[i][j]%2==0)
                                     sum = a[i][j] + sum;
             System.out.println("Tong cac phan tu chan co trong Ma tran A la: " + sum);            
+            
+            int dem=0;
+            for(int i=0; i<m; i++)
+                for(int j=0; j<n; j++)
+                    if(a[i][j]%2!=0)
+                        count = count + 1;
+            System.out.println("So cac phan tu le co trong Ma tran A la: " + count);            
         }
         catch(Exception e){
             System.out.println(e.toString());
